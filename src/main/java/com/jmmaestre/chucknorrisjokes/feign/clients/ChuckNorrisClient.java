@@ -1,7 +1,7 @@
 package com.jmmaestre.chucknorrisjokes.feign.clients;
 
+import com.jmmaestre.chucknorrisjokes.dto.JokeApiResponse;
 import com.jmmaestre.chucknorrisjokes.feign.config.ChuckNorrisClientConfiguration;
-import com.jmmaestre.chucknorrisjokes.model.Joke;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -11,5 +11,5 @@ import org.springframework.web.bind.annotation.GetMapping;
 public interface ChuckNorrisClient {
 
     @GetMapping("/jokes/random")
-    Joke getRandomJoke();
+    JokeApiResponse getRandomJoke();
 }

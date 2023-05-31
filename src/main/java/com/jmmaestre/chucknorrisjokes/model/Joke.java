@@ -10,5 +10,5 @@ import lombok.NoArgsConstructor;
 public class Joke {
 
     private String id;
-    private String value;
+    private String text;
 }
