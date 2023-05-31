@@ -9,3 +9,7 @@ feign:
 server:
   servlet:
     contextPath: /v1
+
+spring:
+  mvc:
+    throwExceptionIfNoHandlerFound: true
