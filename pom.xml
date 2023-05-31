@@ -17,6 +17,7 @@
 		<java.version>17</java.version>
 		<spring-cloud.version>2021.0.3</spring-cloud.version>
 		<openfeign.version>4.0.3</openfeign.version>
+		<springfox.version>3.0.0</springfox.version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -88,6 +89,13 @@
 			<artifactId>mapstruct-processor</artifactId>
 			<version>1.5.5.Final</version>
 			<scope>provided</scope>
+		</dependency>
+
+		<!-- Swagger -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-boot-starter</artifactId>
+			<version>${springfox.version}</version>
 		</dependency>
 
 	</dependencies>
