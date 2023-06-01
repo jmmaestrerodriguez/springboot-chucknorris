@@ -191,6 +191,15 @@ public class GlobalExceptionHandler
                 response.getStatus(), request);
     }
 
+    @ExceptionHandler({ NotFoundException.class })
+    public ResponseEntity<Object> handleNotFound(Exception exception, WebRequest request) {
+        ExceptionResponse response = new ExceptionResponse(
+                HttpStatus.NOT_FOUND,
+                "Resource not Found",
+                exception.getMessage());
+        return handleExceptionInternal(exception, response, new HttpHeaders(), response.getStatus(), request);
+    }
+
     @ExceptionHandler({ Exception.class })
     public ResponseEntity<Object> handleAll(Exception exception, WebRequest request) {
         ExceptionResponse response = new ExceptionResponse(

@@ -13,3 +13,8 @@ server:
 spring:
   mvc:
     throwExceptionIfNoHandlerFound: true
+  redis:
+    host: localhost
+    port: 6379
+  cache:
+    type: redis
